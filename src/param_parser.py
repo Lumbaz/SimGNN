@@ -11,12 +11,12 @@ def parameter_parser():
 
     parser.add_argument("--training-graphs",
                         nargs="?",
-                        default="./dataset/train/",
+                        default="/home/lumbaz/Repos/SimGNN/dataset/train/",
 	                help="Folder with training graph pair jsons.")
 
     parser.add_argument("--testing-graphs",
                         nargs="?",
-                        default="./dataset/test/",
+                        default="/home/lumbaz/Repos/SimGNN/dataset/test/",
 	                help="Folder with testing graph pair jsons.")
 
     parser.add_argument("--epochs",

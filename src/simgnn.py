@@ -254,6 +254,18 @@ class SimGNNTrainer(object):
             prediction = self.model(data)
             self.scores.append(calculate_loss(prediction, target))
         self.print_evaluation()
+    
+    def predictionScore(self, t):
+        """
+        Scoring on the test set.
+        """
+        print("\n\nModel evaluation.\n")
+        self.model.eval()
+        data = t
+        data = self.transfer_to_torch(data)
+        target = data["target"]
+        prediction = self.model(data)
+        return prediction
 
     def print_evaluation(self):
         """
